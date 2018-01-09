@@ -1,9 +1,8 @@
 {
-  "name": "reveal.js",
-  "version": "3.6.0",
-  "description": "The HTML Presentation Framework",
-  "homepage": "http://revealjs.com",
-  "subdomain": "revealjs",
+  "name": "how-to-slides",
+  "version": "0.0.1",
+  "description": "Slides of HowTo's project",
+  "homepage": "https://mathieux51.github.io/how-to-slides/",
   "main": "js/reveal.js",
   "scripts": {
     "test": "grunt test",
@@ -11,13 +10,12 @@
     "build": "grunt"
   },
   "author": {
-    "name": "Hakim El Hattab",
-    "email": "hakim.elhattab@gmail.com",
-    "web": "http://hakim.se"
+    "name": "Mathieu Schmidt",
+    "email": "mathieux51@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/hakimel/reveal.js.git"
+    "url": "git://github.com/mathieux51/how-to-slides.git"
   },
   "engines": {
     "node": ">=4.0.0"

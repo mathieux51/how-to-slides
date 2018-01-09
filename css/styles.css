@@ -1,0 +1,9 @@
+.reveal .slide-number {
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 50px;
+  right: inherit;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
