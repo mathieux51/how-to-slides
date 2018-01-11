@@ -7,3 +7,16 @@
   justify-content: center;
   align-items: center;
 }
+
+.persona__img {
+  position: relative;
+  top: -50px;
+}
+
+.reveal .table {
+  font-size: 30px;
+}
+
+.reveal section img {
+  border: 0;
+}
