@@ -119,91 +119,9 @@
           <img class="persona__img" src="https://github.com/mathieux51/HowTo-RSK/raw/master/docs/img/persona-jerry-smith.png" alt="Jerry persona">
         </section>
 
-        <!-- Jerry email -->
-        <section>
-          <img src="img/email.png" alt="Jerry email">
-        </section>
-
-        <!-- Jerry UX Map -->
-        <section>
-          <table class="table">
-            <tr>
-              <th></th>
-              <th>Etape 1</th>
-              <th>Etape 2</th>
-              <th>Etape 3</th>
-            </tr>
-            <tr>
-              <td>Actions</td>
-              <td>Il reçoit un email du manager. Lien et objet de l'email "Bonne nouvelle"</td>
-              <td>Regarder le gif</td>
-              <td>Prépare son environnement reproduire tutoriel</td>
-            </tr>
-            <tr>
-              <td>Pensées</td>
-              <td>"J'ai trouvé le bouton". Il est rassuré: "Ouf !"</td>
-              <td>"Cool ça se répète". Visualiser le temps</td>
-              <td>Eviter fermeture accidentelle pop up</td>
-            </tr>
-            <tr>
-              <td>Expériences</td>
-              <td>😌 Soulagé</td>
-              <td>🙂 Souriant légèrement</td>
-              <td>😀 Souriant</td>
-            </tr>
-            <tr>
-              <td>Opportunités</td>
-              <td>Arriver sur le site avec un gif animé</td>
-              <td>Reproduire le tutoriel</td>
-              <td>Feedback et note</td>
-            </tr>
-          </table>
-        </section>
-
         <!-- Mr. Marklovitz persona -->
         <section>
           <img class="persona__img" src="https://github.com/mathieux51/HowTo-RSK/raw/master/docs/img/persona-marklovitz.png" alt="Mr. Marklovitz persona">
-        </section>
-
-        <!-- Mr. Marklovitz situation -->
-        <section>
-          <img src="img/ux-map-marklovitz.png" alt="Mr. Marklovitze premier contact">
-        </section>
-
-        <!-- Mr. Marklovitz UX Map -->
-        <section>
-          <table class="table">
-            <tr>
-              <th></th>
-              <th>Etape 1</th>
-              <th>Etape 2</th>
-              <th>Etape 3</th>
-            </tr>
-            <tr>
-              <td>Actions</td>
-              <td>Identifier le site</td>
-              <td>Uploader des gifs</td>
-              <td>Partage du lien dans un email ou via copier/coller</td>
-            </tr>
-            <tr>
-              <td>Pensées</td>
-              <td>Où on va ?</td>
-              <td>Besoin de confirmations</td>
-              <td>Crainte que les utilisateurs ne comprennent pas comment s'utilise le site</td>
-            </tr>
-            <tr>
-              <td>Expériences</td>
-              <td>🙁 Légèrement mécontent</td>
-              <td>☹️ Mécontent</td>
-              <td>😔 Déçu</td>
-            </tr>
-            <tr>
-              <td>Opportunités</td>
-              <td>Logo + présentation Clarifier</td>
-              <td>Spinner + messages</td>
-              <td>Création d'un tutoriel pour les utilisateurs qui doivent regarder des gifs</td>
-            </tr>
-          </table>
         </section>
 
         <!-- Environnement technique -->
@@ -366,23 +284,187 @@
             Maquetter une application
           </h3>
           <p>
-            Mockup ➡️
+            Mockup :
             <a href="https://www.figma.com/file/B1YTHaSRYIOfqKkJKEvKmxPM/mock-up">Figma</a>
           </p>
         </section>
 
         <section>
-          <h3>
-            Maquetter une application
-          </h3>
-          <h5>
-            Prototype
-          </h5>
-          <a href="https://marvelapp.com/2i9c8ba">Marvelapp</a>
+          <h3> Maquetter une application </h3>
+          <p> Prototype :
+            <a href="https://marvelapp.com/2i9c8ba">Marvelapp</a>
+          </p>
         </section>
+
+        <section>
+          <h3>Consevoir une base de données</h3>
+          <img src="https://github.com/mathieux51/HowTo-RSK/raw/master/docs/img/one-to-many-attributs.png" alt="diagramme UML gif user">
+          <pre><code>
+// générer un hash
+User.prototype.generateHash = pwd => bcrypt.hash(pwd, bcrypt.genSaltSync(8))
+// Méthode de validation 
+User.prototype.validPassword = function validPassword(pwd) {
+  return bcrypt.compare(pwd, this.password)
+}
+</code></pre>
+        </section>
+        <section>
+          <h3>Mettre en place une base de données</h3>
+          <ul>
+            <li>Choix de l'ORM (Sequelize)</li>
+            <li>Implémentation des entités
+              <code>Gif</code> et
+              <code>User</code>
+            </li>
+            <li>Hashage du mot de passe</li>
+            <li>Préparer et tester le déploiement (
+              <a href="https://www.heroku.com/postgres">Heroku postgres</a>)</li>
+            <li>Tester l'intégrité</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>
+            Développer des pages web en lien avec une base de données
+          </h3>
+        </section>
+
+        <section>
+          <h3>Côté serveur</h3>
+          <ul>
+            <li>Connecter l'ORM (Sequelize) à SQLite et Postgres</li>
+            <li>Connecter GraphQL à l'ORM (Sequelize) </li>
+            <li>Créer les routes</li>
+            <li>Gérer l'authentification</li>
+            <li>Server side rendering</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Côté frontend</h3>
+          <ul>
+            <li>Installer semantic-ui-react</li>
+            <li>Créer les routes</li>
+            <li>Connecter Redux (actions, reducers, constantes...)</li>
+            <li>Navbar</li>
+            <li>"Fetcher" les données GraphQL sur appel de route</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Développer des composants d'accès aux données</h3>
+        </section>
+
+
 
       </section>
 
+      <!-- Demo -->
+      <section>
+
+        <!-- Titre -->
+        <section>
+          <h1>Démonstration de l’interface</h1>
+          <p>Présentation des éléments les plus significatifs de l’interface de l’application </p>
+        </section>
+
+        <!-- Scénario -->
+        <section>
+          <h3>Scénario persona secondaire</h3>
+          <p>Mr. Marklovitz teste l'application pour la première fois</p>
+        </section>
+
+        <!-- Mr. Marklovitz situation -->
+        <section>
+          <img src="img/ux-map-marklovitz.png" alt="Mr. Marklovitze premier contact">
+        </section>
+
+        <!-- Mr. Marklovitz UX Map -->
+        <section>
+          <table class="table">
+            <tr>
+              <th></th>
+              <th>Etape 1</th>
+              <th>Etape 2</th>
+              <th>Etape 3</th>
+            </tr>
+            <tr>
+              <td>Actions</td>
+              <td>Identifier le site</td>
+              <td>Uploader des gifs</td>
+              <td>Partage du lien dans un email ou via copier/coller</td>
+            </tr>
+            <tr>
+              <td>Pensées</td>
+              <td>Où on va ?</td>
+              <td>Besoin de confirmations</td>
+              <td>Crainte que les utilisateurs ne comprennent pas comment s'utilise le site</td>
+            </tr>
+            <tr>
+              <td>Expériences</td>
+              <td>🙁 Légèrement mécontent</td>
+              <td>☹️ Mécontent</td>
+              <td>😔 Déçu</td>
+            </tr>
+            <tr>
+              <td>Opportunités</td>
+              <td>Logo + présentation Clarifier</td>
+              <td>Spinner + messages</td>
+              <td>Création d'un tutoriel pour les utilisateurs qui doivent regarder des gifs</td>
+            </tr>
+          </table>
+        </section>
+
+        <section>
+          <h3>Scénario persona primaire</h3>
+          <p>Jerry reçoit un email de Mr. Marklovitz</p>
+        </section>
+
+        <!-- Jerry email -->
+        <section>
+          <a href="https://apphowto.herokuapp.com">
+            <img src="img/email.png" alt="Jerry email">
+          </a>
+        </section>
+
+        <!-- Jerry UX Map -->
+        <section>
+          <table class="table">
+            <tr>
+              <th></th>
+              <th>Etape 1</th>
+              <th>Etape 2</th>
+              <th>Etape 3</th>
+            </tr>
+            <tr>
+              <td>Actions</td>
+              <td>Il reçoit un email du manager. Lien et objet de l'email "Bonne nouvelle"</td>
+              <td>Regarder le gif</td>
+              <td>Prépare son environnement reproduire tutoriel</td>
+            </tr>
+            <tr>
+              <td>Pensées</td>
+              <td>"J'ai trouvé le bouton". Il est rassuré: "Ouf !"</td>
+              <td>"Cool ça se répète". Visualiser le temps</td>
+              <td>Eviter fermeture accidentelle pop up</td>
+            </tr>
+            <tr>
+              <td>Expériences</td>
+              <td>😌 Soulagé</td>
+              <td>🙂 Souriant légèrement</td>
+              <td>😀 Souriant</td>
+            </tr>
+            <tr>
+              <td>Opportunités</td>
+              <td>Arriver sur le site avec un gif animé</td>
+              <td>Reproduire le tutoriel</td>
+              <td>Feedback et note</td>
+            </tr>
+          </table>
+        </section>
+      </section>
+
+      <!--  Synthèse et conclusion -->
       <section>
 
         <!--  Synthèse et conclusion -->
